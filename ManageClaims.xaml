@@ -1,4 +1,5 @@
 ﻿<UserControl x:Class="CMSC_Part_2.ManageClaims"
+
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <UserControl.Background>
