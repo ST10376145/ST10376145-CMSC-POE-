@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="CMSC_Part_2.SubmitClaimForm"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             Background="#2C3E50">
+
+    <StackPanel Margin="20">
+        <!-- Back Button -->
+        <Button Content="Back" Width="100" Background="#95A5A6" Foreground="White" 
+            Margin="0,10" Click="BackButton_Click"/>
+
+        <TextBlock Text="Submit Monthly Claim" FontSize="20" FontWeight="Bold" Margin="0,0,0,20" Foreground="White"/>
+
+        <TextBlock Text="Hours Worked:" Foreground="White"/>
+        <TextBox Name="HoursWorkedTextBox" Width="200" Margin="0,5" 
+             TextChanged="HoursWorkedTextBox_TextChanged" 
+             PreviewTextInput="NumericOnly"/>
+
+        <TextBlock Text="Hourly Rate:" Foreground="White"/>
+        <TextBox Name="HourlyRateTextBox" Width="200" Margin="0,5" 
+             TextChanged="HoursWorkedTextBox_TextChanged" 
+             PreviewTextInput="DecimalOnly"/>
+
+        <TextBlock Text="Additional Notes:" Foreground="White"/>
+        <TextBox Name="NotesTextBox" Width="200" Height="80" Margin="0,5" TextWrapping="Wrap" AcceptsReturn="True"/>
+
+        <Button Content="Upload Supporting Document" Width="200" Margin="0,10" Click="UploadButton_Click"/>
+        <TextBlock Name="FileNameTextBlock" Margin="0,5" Foreground="White"/>
+
+        <!-- Display Total Payment -->
+        <TextBlock Text="Final Payment:" FontWeight="Bold" Margin="10,5,0,0" Foreground="White"/>
+        <TextBlock Name="FinalPaymentTextBlock" FontWeight="Bold" FontSize="16" 
+           Foreground="White" Margin="0,5"/>
+
+
+        <StackPanel Orientation="Horizontal" Margin="0,10">
+            <Button Content="Submit Claim" Width="100" Background="#3498DB" Foreground="White" Click="SubmitClaim_Click"/>
+            <Button Content="Reset" Width="100" Margin="10,0,0,0" Background="#E74C3C" Foreground="White" Click="ResetForm_Click"/>
+        </StackPanel>
+
+    </StackPanel>
+</UserControl>
